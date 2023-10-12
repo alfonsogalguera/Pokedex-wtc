@@ -1,0 +1,88 @@
+@import '../../styles/Pokedex.scss';
+
+.link {
+  text-decoration: none;
+  .container_card {
+    padding-top: 10px;
+    margin: 10px;
+    background-color: $white;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 85%;
+    @include tablet {
+      width: 250px;
+    }
+    flex-direction: column;
+    border-radius: 16px;
+    box-shadow: $shadow;
+    .name {
+      p {
+        margin: 0;
+        padding: 0;
+        color: $text;
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: capitalize;
+      }
+    }
+    .id {
+      p {
+        margin: 0;
+        padding: 10px 0px 0px 0px;
+        font-size: 20px;
+        color: $text;
+        opacity: 0.8;
+      }
+    }
+    .img {
+      text-align: center;
+      img {
+        width: 100%;
+      }
+    }
+    .type {
+      p {
+        font-size: 14px;
+        span {
+          border-radius: 12px;
+          color: $white;
+          padding: 3px 10px 3px 10px;
+          margin: 8px;
+
+          &.green {
+            background-color: rgb(48, 208, 48);
+          }
+          &.purple {
+            background-color: rgb(174, 53, 174);
+          }
+          &.orange {
+            background-color: rgb(255, 176, 31);
+          }
+          &.sky {
+            background-color: rgb(49, 200, 255);
+          }
+          &.blue {
+            background-color: rgb(17, 17, 155);
+          }
+          &.bug {
+            background-color: rgb(19, 92, 19);
+          }
+          &.gray {
+            background-color: grey;
+          }
+          &.yellow {
+            background-color: yellow;
+            color: #000;
+          }
+          &.rock {
+            background-color: rgb(138, 138, 48);
+          }
+          &.default {
+            background-color: thistle;
+          }
+        }
+      }
+    }
+  }
+}

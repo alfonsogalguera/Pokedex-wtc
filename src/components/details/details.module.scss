@@ -1,0 +1,124 @@
+@import '../../styles/Pokedex.scss';
+.container_details{
+ width: 100%;
+ display: grid;
+ margin-bottom: 100px;
+ grid-template-columns: 100%;
+ @include tablet{
+     grid-template-columns: 40% 60%;
+ }
+ .container_info{
+    padding: 30px 10px 30px 10px;
+    margin-top: 30px;
+    margin-left: auto ;
+    margin-right: auto;
+    background-color:$white;
+    border:none;
+    width: 250px;
+    @include tablet{
+        padding: 30px 20px 30px 20px;
+        width: 70%;
+        height: 400px;
+        margin-right: auto;
+        margin-left: 10px;
+    }
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 16px;
+    box-shadow: $shadow;   
+    .name{
+        p{
+            margin: 0;
+            padding: 0;
+            color: $text;
+            font-weight: 700;
+            font-size: 30px;
+            text-transform: capitalize;
+            text-align: center;
+            @include tablet{
+                text-align: left;
+            }
+        }
+    }
+    .type{
+        p{
+            font-size: 14px;
+            margin-bottom: 40px;
+            text-transform: capitalize;
+            text-align: center;
+            @include tablet{
+                text-align: left;
+            }
+            span{
+                border-radius: 15px;
+                color: $white;
+                padding: 3px 10px 3px 10px;
+                margin: 8px;
+
+                &.green
+                {
+                    background-color: rgb(48, 208, 48);
+                }
+              &.purple{
+                  background-color: rgb(174, 53, 174);
+              }
+              &.orange{
+                  background-color: rgb(255, 176, 31);
+              }
+              &.sky{
+                  background-color: rgb(49, 200, 255);
+              }
+              &.blue{
+                  background-color: rgb(17, 17, 155);
+              }
+              &.bug{
+                  background-color: rgb(19, 92, 19);
+              }
+              &.gray{
+                background-color: grey;
+              }
+              &.yellow{
+                  background-color:yellow;
+                  color: #000;
+              }
+              &.rock{
+                  background-color: rgb(138, 138, 48);
+              }
+              &.default{
+                  background-color: thistle;
+              }
+
+            }
+        }
+    }
+    .details{
+        .title{
+            margin: 0;
+            padding: 0;
+            color: $text;
+            font-weight: 650;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+        .text{
+            margin: 0;
+            padding: 0;
+            color: $text;
+        }
+        hr{
+            border: .1px solid $sky;
+            background-color: $sky;
+        }
+    }
+    .container_imgshiny{
+        .title{
+            margin: 0;
+            padding: 0;
+            color: $text;
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+    }
+ }
+}

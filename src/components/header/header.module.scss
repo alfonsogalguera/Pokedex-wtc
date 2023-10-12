@@ -1,0 +1,113 @@
+@import '../../styles/Pokedex.scss';
+
+.container_header{   
+    background-color: transparent;
+    width: 100%;
+
+    .container_nav{
+        padding: 0px 25px 0px 25px;
+        position: fixed;
+        background-color: $blue;
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        @include tablet{
+            display: none;
+            height: 0;
+            width: 0;
+            padding: 0;
+            margin: 0;
+        }
+        .hamburger_icon{
+            margin-right: auto;
+        }
+        .logo{
+            margin-right: auto;
+            margin-left: -80px;
+        }
+    }
+
+    .container_form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+        width: auto;
+        margin: 0px 20px 0px 20px;
+        @include tablet{
+            padding-top: 40px;
+        }
+        .button_back{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        input{
+            width: 200px;
+            border-radius: 20px;
+            border: none;
+            height: 30px;
+            box-shadow: $shadow;
+            padding-left: 10px;
+            &:focus{
+                outline: none;
+            }
+            &.select{
+                border: 2px solid $blue;
+            }
+        }
+        button{
+            width: 50px;
+            height: 38px;
+            background-color: $blue;
+            border-radius: 20px;
+            border:none;
+            margin-left: -50px;
+            margin-top: -1px;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+    @include tablet{
+        .container_form{
+            width: auto;
+            display: flex;
+            align-items: center;
+            margin: 0px 20px 0px 20px;
+            .button_back{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 30px;
+            }
+            input{
+                width: 350px;
+                border-radius: 20px;
+                border: none;
+                height: 35px;
+                box-shadow: $shadow;
+                padding-left: 10px;
+                margin-left: auto;
+                &:focus{
+                    outline: none;
+                }
+            }
+            button{
+                width: 60px;
+                height: 40px;
+                background-color: $blue;
+                border-radius: 20px;
+                border:none;
+                margin-left: -50px;
+                margin-top: -1px;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
